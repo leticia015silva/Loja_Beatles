@@ -1,0 +1,118 @@
+:root {
+  --ink: #20271F;
+  --moss: #3C5443;
+  --moss-deep: #28392E;
+  --clay: #B6562F;
+  --line: #DAD4C3;
+  --card-bg: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Define o fundo preto oficial da sua loja */
+.meu-estilo-de-fundo {
+  background-color: #000000 !important;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Força os textos específicos a ficarem brancos */
+.estilo-texto-branco {
+  color: #ffffff !important;
+}
+
+/* Títulos com a fonte elegante Fraunces */
+h1, .card-title {
+  font-family: 'Fraunces', serif;
+}
+
+/* ===== CUSTOMIZAÇÃO DO CARTÃO DO BOOTSTRAP ===== */
+.custom-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card .card-body {
+  background-color: #504a99;
+}
+
+.custom-card .card-body h2,
+.custom-card .card-body span.fw-bold {
+  color: #ffffff !important;
+}
+
+.custom-card .card-body span.text-muted {
+  color: #d9d6f5 !important;
+}
+
+.custom-card .card-body .badge {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.4) !important;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Zoom suave na imagem ao passar o mouse */
+.custom-img {
+  transition: transform 0.4s ease;
+}
+
+.custom-card:hover .custom-img {
+  transform: scale(1.04);
+}
+
+/* Linha decorativa picotada (Estilo Bilhete de Show) */
+.tear-line {
+  position: relative;
+  height: 1px;
+  background-image: linear-gradient(to right, var(--line) 60%, transparent 0%);
+  background-size: 9px 1px;
+  background-repeat: repeat-x;
+  margin: 0 14px;
+}
+
+.tear-line::before,
+.tear-line::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #111111; /* Cor idêntica ao fundo do site para criar o efeito de furo */
+  border: 1px solid var(--line);
+}
+
+.tear-line::before { left: -19px; }
+.tear-line::after { right: -19px; }
+
+/* Botão customizado */
+.custom-btn {
+  background-color: var(--moss-deep) !important;
+  border: none !important;
+}
+
+.custom-btn:hover {
+  background-color: var(--clay) !important;
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .custom-card, .custom-img {
+    transition: none !important;
+  }
+}
+
+/* Força a caixa de imagem do Bootstrap a ter o tamanho correto na tela */
+.ratio-4x5 {
+  --bs-aspect-ratio: 125% !important;
+  background-color: #222222 !important; /* Cria um fundo cinza escuro para você ver onde a foto vai ficar */
+}
+

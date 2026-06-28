@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loja Oficial - The Beatles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <link href="customizacao.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  </head>
+  <body class="meu-estilo-de-fundo">
+ 
+	  
+<div class="container-fluid px-0">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- 1. Adicionado justify-content-center e text-center no container interno -->
+    <div class="container-fluid justify-content-center text-center"> 
+      
+      <!-- 2. Adicionado me-0 para remover margens da logo e mb-2 para espaçar no mobile -->
+      <a class="navbar-brand me-3 mb-2 mb-lg-0" href="#">
+        <img src="imagens/logotipo1.png" alt="Logo">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- 3. Adicionado flex-grow-0 para o menu não esticar e manter a centralização -->
+      <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+        <!-- 4. Adicionado align-items-center para alinhar o botão da loja com os links de texto -->
+  <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"> Início </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"> Sobre nós </a>
+          </li>  
+          
+          <!-- CORREÇÃO: "dropdown" com 'n' no final. Adicionado nav-link para estilizar o botão -->
+          <li class="nav-item dropdown mx-3">
+            <button class="btn nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Loja Oficial
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Camiseta</a></li>
+              <li><a class="dropdown-item" href="#">Jaqueta</a></li>
+              <li><a class="dropdown-item" href="#">Livraria</a></li>
+              <li><a class="dropdown-item" href="#">Acessórios</a></li>
+              <li><a class="dropdown-item" href="#">Coleção Clássicos</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"> Eventos </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"> Contato </a>
+          </li>
+          <!-- NOVO: Ícone de carrinho -->
+    <li class="nav-item ms-3">
+            <a class="nav-link position-relative" href="#">
+            <i class="bi bi-cart3 fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+           </a>
+    </li>
+  </ul>
+</div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container-fluid mt-3">
+    <div class="cupom-primeira-compra-main">
+        <div class="cupom-primeira-compra estilo-texto-branco text-center">
+            <span>Use o cupom PRIMEIRA15<b></b> e ganhe<b> 15% OFF</b> na primeira compra. <a target="_blank" href="https://www.lojasrenner.com.br/regulamentos">
+                Ver condições</a>.
+            </span>
+             <div class="cupom-copy">
+                  <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path>
+                  </path> 
+               </svg>
+           </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-0 mb-5">
+ <picture>
+  <!-- Tela pequena (celular): usa essa imagem -->
+  <source media="(max-width: 768px)" srcset="imagens/banner_mobile_comprimido.jpg">
+  
+  <!-- Tela grande (desktop): usa essa imagem -->
+  <img src="imagens/banner_desktop_comprimido.jpg" class="img-fluid w-100"alt="Banner Jaqueta Edição Clássicos">
+</picture>
+
+<div class="container-fluid mt-3 px-5">
+   <div class="nav-item dropdown mx-5 text-end">
+          <div class="dropdown">
+             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              FILTRO
+          </button>
+    <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Casual</a></li>
+            <li><a class="dropdown-item" href="#">Edição Limitada</a></li>
+            <li><a class="dropdown-item" href="#">Infantil</a></li>
+          </ul>
+         </div>
+   </div>
+</div>
+
+<!-- Vitrine de Produtos -->
+<div class="container mt-3 pb-5">
+  
+  <div class="mb-4">
+    <div class="text-uppercase text-muted small fw-semibold estilo-texto-branco" style="letter-spacing: 0.12em;">Coleção atual</div>
+    <h1 class="fw-bold display-6 mt-1 estilo-texto-branco">Roupas em destaque</h1>
+  </div>
+
+  <!-- Grid de 3 colunas do Bootstrap -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- PRODUTO 1 -->
+ <div class="col">
+  <article class="card h-100 shadow-sm custom-card">
+    <div class="position-relative">
+      <img src="imagens/ecobag.jpg" class="card-img-top custom-img" style="height: 400px; object-fit:cover; width: 100%; background-color: rgb(235, 98, 28);" alt="Camiseta 100% algodão">
+      <div class="position-absolute d-flex gap-1" style="bottom: 10px; left: 10px;">
+        <span style="width: 18px; height: 18px; border-radius: 50%; background-color:black; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+        <span style="width: 18px; height: 18px; border-radius: 50%; background-color:rgb(14, 81, 136); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+      </div>
+    </div>
+
+    <div class="tear-line" aria-hidden="true"></div>
+    <div class="card-body d-flex flex-column p-3 gap-2">
+      <span class="text-uppercase text-muted small fw-medium" style="letter-spacing: 0.1em;">Bolsas</span>
+      <h2 class="card-title h5 my-0 fw-semibold text-dark">Ecobag Ícones</h2>
+      <div class="d-flex gap-2 my-1">
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">P</span>
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">M</span>
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">G</span>
+      </div>
+      <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+        <span class="fw-bold fs-5 text-dark">R$ 75,00</span>
+        <button class="btn btn-dark btn-sm px-3 py-2 fw-medium custom-btn">Adicionar</button>
+      </div>
+    </div>
+  </article>
+</div>
+
+  <!-- PRODUTO 2 -->
+<div class="col">
+  <article class="card h-100 shadow-sm custom-card">
+    <div class="position-relative">
+      <img src="imagens/bone_branco_roxo.jpg" class="card-img-top custom-img" style="height: 400px; width: 100%; object-fit: contain; padding: 40px; background-color: black;" alt="Boné">
+      <div class="position-absolute d-flex gap-1" style="bottom: 10px; left: 10px;">
+        <span style="width: 18px; height: 18px; border-radius: 50%; background-color:rgb(52, 3, 226); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+        <span style="width: 18px; height: 18px; border-radius: 50%; background-color:rgb(255, 255, 255); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+        <span style="width: 18px; height: 18px; border-radius: 50%; background-color:rgb(0, 0, 0); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+      </div>
+    </div>
+
+    <div class="tear-line" aria-hidden="true"></div>
+    <div class="card-body d-flex flex-column p-3 gap-2">
+      <span class="text-uppercase text-muted small fw-medium" style="letter-spacing: 0.1em;">Casual</span>
+      <h2 class="card-title h5 my-0 fw-semibold text-dark">Boné</h2>
+      <div class="d-flex gap-2 my-1">
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">P</span>
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">M</span>
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">G</span>
+      </div>
+      <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+        <span class="fw-bold fs-5 text-dark">R$ 55,00</span>
+        <button class="btn btn-dark btn-sm px-3 py-2 fw-medium custom-btn">Adicionar</button>
+      </div>
+    </div>
+  </article>
+</div>
+
+    <!-- PRODUTO 3 -->
+ <div class="col">
+  <article class="card h-100 shadow-sm custom-card">
+    <div class="position-relative">
+      <img src="imagens/jaqueta_couro.jpg" class="card-img-top custom-img" style="height: 400px; object-fit: conatin; width: 100%; padding: 40px; background-color: rgb(255, 255, 255);" alt="Camiseta 100% algodão">
+      <div class="position-absolute d-flex gap-1" style="bottom: 10px; left: 10px;">
+        <span style="width: 18px; height: 18px; border-radius: 50%; background-color:black; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+      </div>
+    </div>
+
+    <div class="tear-line" aria-hidden="true"></div>
+    <div class="card-body d-flex flex-column p-3 gap-2">
+      <span class="text-uppercase text-muted small fw-medium" style="letter-spacing: 0.1em;">Clássicos</span>
+      <h2 class="card-title h5 my-0 fw-semibold text-dark">Jaqueta de Couro</h2>
+      <div class="d-flex gap-2 my-1">
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">P</span>
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">M</span>
+        <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">G</span>
+      </div>
+      <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+        <span class="fw-bold fs-5 text-dark">R$ 190,00</span>
+        <button class="btn btn-dark btn-sm px-3 py-2 fw-medium custom-btn">Adicionar</button>
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- PRODUTO 4 -->
+  <div class="col">
+    <article class="card h-100 shadow-sm custom-card">
+      <div class="position-relative">
+        <img src="imagens/livro_infantil.png" class="card-img-top custom-img" style="height: 400px; object-fit: cover;" alt="Nome do Produto 4">
+      </div>
+      <div class="tear-line" aria-hidden="true"></div>
+      <div class="card-body d-flex flex-column p-3 gap-2">
+        <span class="text-uppercase text-muted small fw-medium" style="letter-spacing: 0.1em;">Infantil</span>
+        <h2 class="card-title h5 my-0 fw-semibold text-dark">Livro: Em busca do Sargento Pepperoni</h2>
+        <div class="d-flex gap-2 my-1">
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">P</span>
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">M</span>
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">G</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+          <span class="fw-bold fs-5 text-dark">R$ 70,00</span>
+          <button class="btn btn-dark btn-sm px-3 py-2 fw-medium custom-btn">Adicionar</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- PRODUTO 5 -->
+  <div class="col">
+    <article class="card h-100 shadow-sm custom-card">
+      <div class="position-relative">
+        <img src="imagens/camiseta_azul.jpg" class="card-img-top custom-img" style="height: 400px; object-fit: cover;" alt="Camiseta 100% algodão">
+      </div>
+      <div class="tear-line" aria-hidden="true"></div>
+      <div class="card-body d-flex flex-column p-3 gap-2">
+        <span class="text-uppercase text-muted small fw-medium" style="letter-spacing: 0.1em;">Camiseta</span>
+        <h2 class="card-title h5 my-0 fw-semibold text-dark">Camiseta 100% algodão</h2>
+        <div class="d-flex gap-2 my-1">
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">P</span>
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">M</span>
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">G</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+          <span class="fw-bold fs-5 text-dark">R$ 70,00</span>
+          <button class="btn btn-dark btn-sm px-3 py-2 fw-medium custom-btn">Adicionar</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- PRODUTO 6 -->
+  <div class="col">
+    <article class="card h-100 shadow-sm custom-card">
+      <div class="position-relative">
+        <img src="imagens/caneca.png" class="card-img-top custom-img" style="height: 400px; object-fit: cover;" alt="Nome do Produto 4">
+      </div>
+      <div class="tear-line" aria-hidden="true"></div>
+      <div class="card-body d-flex flex-column p-3 gap-2">
+        <span class="text-uppercase text-muted small fw-medium" style="letter-spacing: 0.1em;"> Coleção Clássicos</span>
+        <h2 class="card-title h5 my-0 fw-semibold text-dark">Caneca de Porcelana The Beatles</h2>
+        <div class="d-flex gap-2 my-1">
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">300 ml</span>
+          <span class="badge border border-secondary-subtle text-dark fw-normal bg-transparent px-2 py-1">400 ml</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-auto pt-2">
+          <span class="fw-bold fs-5 text-dark">R$ 45,00</span>
+          <button class="btn btn-dark btn-sm px-3 py-2 fw-medium custom-btn">Adicionar</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</div> <!-- Fim do .row -->
+</div> <!-- Fim do .container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>              
+
